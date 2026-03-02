@@ -10,8 +10,7 @@ services:
           property: connectionString
     region: oregon
     buildCommand: npm install && npm run build
-    preDeployCommand: npx prisma migrate deploy
-    startCommand: npm run start
+    startCommand: npx prisma migrate deploy && npm run start
 
 databases:
   - name: bitespeed-backend-task-2fDtw-db
