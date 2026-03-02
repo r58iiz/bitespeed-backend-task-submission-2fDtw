@@ -1,0 +1,36 @@
+{
+	"name": "bitespeed-backend-task-submission-2fdtw",
+	"version": "1.0.0",
+	"description": "Task at https://drive.google.com/file/d/1h3xh2PKP8aQW85hDdn2qUkXDUUAVDKaP/view",
+	"main": "index.js",
+	"scripts": {
+		"build": "tsc",
+		"start": "node dist/index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/r58iiz/bitespeed-backend-task-submission-2fDtw.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "module",
+	"bugs": {
+		"url": "https://github.com/r58iiz/bitespeed-backend-task-submission-2fDtw/issues"
+	},
+	"homepage": "https://github.com/r58iiz/bitespeed-backend-task-submission-2fDtw#readme",
+	"dependencies": {
+		"@prisma/adapter-pg": "^7.4.2",
+		"@prisma/client": "^7.4.2",
+		"dotenv": "^17.3.1",
+		"express": "^5.2.1",
+		"prisma": "^7.4.2"
+	},
+	"devDependencies": {
+		"@types/express": "^5.0.6",
+		"@types/node": "^25.3.3",
+		"ts-node": "^10.9.2",
+		"ts-node-dev": "^2.0.0",
+		"typescript": "^5.9.3"
+	}
+}
