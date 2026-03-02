@@ -1,6 +1,6 @@
-import type { Contact, Prisma } from "../../generated/prisma/client";
-import { LinkPrecedence } from "../../generated/prisma/enums";
-import { prisma } from "../prisma.lib";
+import type { Contact, Prisma } from "../generated/prisma/client.js";
+import { LinkPrecedence } from "../generated/prisma/enums.js";
+import { prisma } from "../prisma.lib.js";
 
 export interface IdentifyResponse {
   primaryContactId: number;
@@ -13,7 +13,7 @@ export const identifyContact = async (
   email?: string,
   phoneNumber?: string,
 ): Promise<IdentifyResponse> => {
-  return await prisma.$transaction(async (txn) => {
+  return await prisma.$transaction(async (txn: Prisma.TransactionClient) => {
     const primaryContact = await insertAndUpdateContactsAndGetPrimary(
       txn,
       email,

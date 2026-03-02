@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import { identifyContact } from "../services/contact.service";
+import { identifyContact } from "../services/contact.service.js";
 
 export const identify = async (req: Request, res: Response) => {
   const { email, phoneNumber } = req.body;
