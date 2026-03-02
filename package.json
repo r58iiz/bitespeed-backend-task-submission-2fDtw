@@ -5,7 +5,10 @@
 	"main": "index.js",
 	"scripts": {
 		"build": "tsc",
-		"start": "node dist/index.js"
+		"start": "node dist/index.js",
+		"dev": "tsx watch src/index.ts",
+		"postinstall": "prisma generate",
+		"prisma:generate": "prisma generate"
 	},
 	"repository": {
 		"type": "git",
@@ -31,6 +34,7 @@
 		"@types/node": "^25.3.3",
 		"ts-node": "^10.9.2",
 		"ts-node-dev": "^2.0.0",
+		"tsx": "^4.21.0",
 		"typescript": "^5.9.3"
 	}
 }
