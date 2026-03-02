@@ -12,3 +12,22 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+enum LinkPrecedence {
+  primary
+  secondary
+}
+
+model Contact {
+  id             Int            @id @default(autoincrement())
+  phoneNumber    String?
+  email          String?
+  linkedId       Int?
+  linkPrecedence LinkPrecedence
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+  deletedAt      DateTime?
+
+  primary   Contact?  @relation("ContactLink", fields: [linkedId], references: [id])
+  secondary Contact[] @relation("ContactLink")
+}
