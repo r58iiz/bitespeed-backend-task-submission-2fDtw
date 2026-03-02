@@ -21,7 +21,7 @@ export const identifyContact = async (
     );
 
     // Final result
-    const finalContacts = await prisma.contact.findMany({
+    const finalContacts = await txn.contact.findMany({
       where: {
         OR: [{ id: primaryContact.id }, { linkedId: primaryContact.id }],
       },
